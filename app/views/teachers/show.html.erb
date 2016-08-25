@@ -1,0 +1,19 @@
+<% cache @teacher do %>
+  <h2>Teacher</h2>
+
+  <div class="teacher">
+    <div>
+      <strong>Name:</strong>
+      <%= @teacher.name %>
+    </div>
+  </div>
+<% end %>
+
+<% cache [ @teacher, courses_cache_key ] do %>
+  <div>
+    <div>
+      <strong>Courses:</strong>
+    </div>
+    <%= render partial: "courses/course", collection: @teacher.courses.order(:name), as: :course %>
+  </div>
+<% end %>

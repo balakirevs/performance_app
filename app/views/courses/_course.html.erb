@@ -1,0 +1,7 @@
+<% cache [ course, course.teacher ] do %>
+  <div class="course" data-course-id="<%= course.id %>">
+    <div class="name"><%= link_to course.name, course %></div>
+    <div class="teacher"><%= course.teacher.name %></div>
+    <div class="student-count"><%= course.enrollments.size %></div>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+one:
+  name: Course one
+  description: A class
+  teacher: one
+
+two:
+  name: Course two
+  description: Another class
+  teacher: two

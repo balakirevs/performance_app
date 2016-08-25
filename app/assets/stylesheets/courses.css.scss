@@ -1,0 +1,74 @@
+.courses {
+  .teacher {
+    display: inline;
+  }
+
+  input[type=submit], .enrolled {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+}
+
+.course-headers {
+  font-weight: bold;
+}
+
+.course, .course-headers {
+  .name {
+    vertical-align: top;
+    width: 340px;
+  }
+  .teacher {
+    vertical-align: top;
+    width: 150px;
+  }
+  .name, .teacher, .student-count {
+    vertical-align: top;
+  }
+  .name {
+    display: inline-block;
+  }
+  .teacher, .student-count {
+    display: none;
+  }
+  &:nth-child(even) {
+    background-color: #eee;
+  }
+  margin-bottom: 10px;
+}
+
+.course .student-count {
+  margin-left: 2em;
+}
+
+.user-courses .course .teacher {
+  display: inline-block;
+}
+
+.teachers .content .course .student-count {
+  display: inline-block;
+}
+
+.home .content, .students .content {
+  .student-count, .teacher {
+    display: inline-block;
+  }
+}
+
+.course {
+  position: relative;
+}
+
+.hover-description {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 1em;
+  padding: 1em;
+  display: block;
+  position: absolute;
+  left: 1em;
+  top: 2em;
+  z-index: 20;
+  font-size: 80%;
+}

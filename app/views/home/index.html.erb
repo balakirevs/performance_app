@@ -1,0 +1,14 @@
+<% cache courses_cache_key do %>
+  <div>
+    <h2>Online MBA Courses</h2>
+    <div>
+      <div class="course-headers">
+        <div class="name">Course</div>
+        <div class="teacher">Teacher</div>
+        <div class="student-count">Students</div>
+      </div>
+      <%= render @courses %>
+    </div>
+    <%= paginate @courses %>
+  </div>
+<% end %>

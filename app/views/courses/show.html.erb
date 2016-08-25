@@ -1,0 +1,34 @@
+<% cache [ @course, @course.teacher ] do %>
+  <h2>Course</h2>
+
+  <div>
+    <strong>Name:</strong>
+    <%= @course.name %>
+  </div>
+
+  <div>
+    <strong>Description:</strong>
+    <%= @course.description %>
+  </div>
+
+  <div>
+    <strong>Teacher:</strong>
+    <%= render @course.teacher %>
+  </div>
+<% end %>
+
+<% if current_user %>
+  <% if enrolled? %>
+    <div class="enrolled">You are enrolled.</div>
+  <% else %>
+    <%= button_to "Enroll", enrollments_path(enrollment: { course_id: @course.id, student_id: current_user.id }) %>
+  <% end %>
+<% end %>
+
+<% cache [ @course, students_cache_key ] do %>
+  <div>
+    <strong>Students:</strong>
+    <%= render @students %>
+    <%= paginate @students %>
+  </div>
+<% end %>

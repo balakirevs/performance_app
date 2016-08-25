@@ -1,0 +1,22 @@
+<% cache @student do %>
+  <h2>Student</h2>
+
+  <div class="student">
+    <div>
+      <strong>Name:</strong>
+      <%= @student.name %>
+    </div>
+    <div>
+      <strong>Email:</strong>
+      <%= @student.email %>
+    </div>
+  </div>
+<% end %>
+
+<% cache [ @student, courses_cache_key ] do %>
+  <div>
+    <strong>Courses:</strong>
+    <%= render @courses %>
+    <%= paginate @courses %>
+  </div>
+<% end %>

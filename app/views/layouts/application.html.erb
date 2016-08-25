@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= [ @title, "Performance App" ].compact.join(" - ") %></title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= request.params[:controller] %> <%= request.params[:action] %>"
+      <%= turbolinks_flag %> >
+
+  <div id="notice"><%= notice %></div>
+  <div id="alert"><%= alert %></div>
+
+  <% if current_user %>
+    <%= render "layouts/current_user" %>
+  <% else %>
+    <div class="new-account"><%= link_to "Login", login_path %></div>
+  <% end %>
+
+  <%= render "layouts/students_and_teachers" %>
+
+  <h1><%= link_to "Performance App", root_path %></h1>
+
+  <div class="content">
+    <%= yield %>
+  </div>
+
+</body>
+</html>

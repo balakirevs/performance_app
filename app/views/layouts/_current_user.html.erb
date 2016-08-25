@@ -1,0 +1,11 @@
+<% cache [ current_user, courses_cache_key ] do %>
+  <div class="current-user">
+    <%= current_user.name %> - <%= link_to "Logout", logout_path %>
+    <div class="user-courses">
+      <h3>Your courses</h3>
+      <%= render partial: "courses/course",
+                 collection: current_user_courses,
+                 as: :course %>
+    </div>
+  </div>
+<% end %>

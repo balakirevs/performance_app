@@ -1,0 +1,132 @@
+/*
+ * This manifest file intentionally includes several CSS Libraries that we're
+ * not going to use, in order to simulate a real-world app (since many real-world
+ * apps includes lots of CSS libraries).
+ *
+ *= require yui-combo
+ *= require_self
+ *= require_tree .
+ *= require css/smoothness/jquery-ui-1.10.1.custom.min
+ *= require css/bootstrap-responsive.min
+ */
+
+html {
+  background: image-url("white_wall_hash.png");
+  margin: 0;
+  padding: 0;
+  font-family: "Verdana";
+}
+body {
+  background-color: white;
+  width: 600px;
+  margin: 0 auto;
+  padding: 1em 3em 3em;
+  font-size: 14pt;
+  line-height: 20pt;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: default;
+  padding: 0.2em;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 180%;
+}
+
+.current-user, .new-account {
+  float: right;
+  clear: right;
+  margin-top: 1em;
+  .user-courses {
+    position: absolute;
+    display: none;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 1em;
+    font-size: 80%;
+    .course {
+      .name {
+        max-width: 200px;
+      }
+      .teacher {
+        max-width: 200px;
+      }
+      &:nth-child(even) {
+        background-color: #eee;
+      }
+    }
+  }
+  &:hover {
+    .user-courses {
+      display: block;
+    }
+  }
+}
+
+.list-students-and-teachers {
+  float: right;
+  clear: right;
+  margin-top: 1em;
+  div {
+    display: inline-block;
+    margin-left: 1em;
+  }
+}
+
+.content {
+  clear: right;
+}
+
+#notice, #alert {
+  padding: 1em;
+  border-radius: 5px;
+  &:empty {
+    display: none;
+  }
+}
+
+#notice {
+  color: white;
+  background-color: limegreen;
+  background-image: -webkit-linear-gradient(limegreen, darkgreen);
+  background-image: -moz-linear-gradient(limegreen, darkgreen);
+  background-image: linear-gradient(limegreen, darkgreen);
+}
+
+#alert {
+  color: white;
+  background-color: firebrick;
+}
+
+/* Overrides to make rack-mini-profiler bigger for the screencast */
+.profiler-results {
+  .profiler-result, .profiler-queries {
+    font-size: 24px;
+  }
+  .profiler-results .profiler-controls {
+    font-size: 24px;
+  }
+  .profiler-results .profiler-queries th {
+    font-size: 34px;
+  }
+  .profiler-result-full .profiler-result .profiler-popup .profiler-info {
+    font-size: 50px;
+  }
+  .profiler-result-full .profiler-result .profiler-popup .profiler-timings td {
+    font-size: 28px;
+  }
+  .profiler-result-full .profiler-result .profiler-queries th {
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .profiler-popup {
+    line-height: 24px;
+  }
+  .profiler-timings {
+    line-height: 24px;
+  }
+}
