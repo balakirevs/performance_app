@@ -51,6 +51,7 @@ README
       28205   904 ps -o pid,rss,command       
       ```
       find_each is barely slower though much less memory used than with all.each.
+      
 ##### Browser Cashing
    - HTTP Haders:
      - Last-Modified / If-Modified-Since
@@ -62,18 +63,21 @@ README
    - Include session data into ETag
    - Declarative ETags
    - Reset ETags on deploy for HTML and CSS changes
-   - usage of expires_in  
+   - usage of expires_in
+     
 ##### Fragment Cashing
    - Memcached
    - gem Dalli
    - Fragment caching
    - Cache key includes digest of view contents
    - Cache expiration strategies
+   
 ##### Russian Doll Cashing
    - Hiding links
    - Time Zones
    - Increasing cache hits
    - Helping Rails know what partial was used
+   
 ##### Turbolinks & Pjax
    - Turbolinks: single-page app performance for multi page apps
    - Permalinks and working back button
