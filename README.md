@@ -52,10 +52,38 @@ README
       ```
       find_each is barely slower though much less memory used than with all.each.
 ##### Browser Cashing
+   - HTTP Haders:
+     - Last-Modified / If-Modified-Since
+     - ETag / If-None-Match
+     - Cache-Control: public, private, max-age
+   - Rack ETag
+   - Usage stale? or fresh_when
+   - Propagade updated_at to owning objects with touch:true
+   - Include session data into ETag
+   - Declarative ETags
+   - Reset ETags on deploy for HTML and CSS changes
+   - usage of expires_in  
 ##### Fragment Cashing
+   - Memcached
+   - gem Dalli
+   - Fragment caching
+   - Cache key includes digest of view contents
+   - Cache expiration strategies
 ##### Russian Doll Cashing
+   - Hiding links
+   - Time Zones
+   - Increasing cache hits
+   - Helping Rails know what partial was used
 ##### Turbolinks & Pjax
-
+   - Turbolinks: single-page app performance for multi page apps
+   - Permalinks and working back button
+   - pushState
+   - Degrades gracefully
+   - Data-Turbolinks-Track: detect asset changes
+   - JQuery Turbolinks
+   - Plugin compatibility site
+   - Alternative: pjax
+   
 Setup
 -----
 
