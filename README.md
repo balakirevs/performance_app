@@ -23,7 +23,7 @@ README
     - if making multiple writes - use transaction
     - if iterating over tons of rows - use find_each
       ```bash
-      ➜  iteachu rails c
+      ➜  performance_app rails c
       Loading development environment (Rails 4.2.7.1)
       2.3.1 :001 > Enrollment
       => Enrollment (call 'Enrollment.connection' to establish a connection)
@@ -31,20 +31,21 @@ README
       Enrollment Load (1235.4ms)  SELECT "enrollments".* FROM "enrollments"
        => 9.763525928006857
       2.3.1 :002 > exit
-      ➜  iteachu ps -o pid,rss,command 
+      ➜  performance_app ps -o pid,rss,command 
       PID   RSS COMMAND
       20599  7412 -zsh
       27440   908 ps -o pid,rss,command  
       ```
+      
       ```bash
-      ➜  iteachu rails c
+      ➜  performance_app rails c
       Loading development environment (Rails 4.2.7.1)
       2.3.1 :001 > Enrollment
       => Enrollment (call 'Enrollment.connection' to establish a connection)
       2.3.1 :001 > Benchmark.realtime { Enrollment.find_each {} }
       => 10.758293303995742
       2.3.1 :004 >   exit
-      ➜  iteachu ps -o pid,rss,command                       
+      ➜  performance_app ps -o pid,rss,command                       
       PID   RSS COMMAND
       20599  7412 -zsh
       28205   904 ps -o pid,rss,command       
