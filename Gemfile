@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.4.0'
 
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.8'
 gem 'pg'
 gem 'thin'
 gem 'jquery-rails'
@@ -32,6 +32,6 @@ group :development, :test do
 end
 
 group :assets do
-  gem 'sass-rails', '~> 4.0.3'
+  gem 'sass-rails'
   gem 'uglifier', '>= 1.3.0'
 end
